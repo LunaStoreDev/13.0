@@ -6,13 +6,12 @@
   <link rel="shortcut icon" href="favicon.ico"
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    /* ----- ФОН 256x256, НЕ РАСТЯГИВАЕТСЯ, ПЛИТКА ----- */
     body {
       margin: 0;
       padding: 30px 20px;
       font-family: 'Segoe UI', Arial, sans-serif;
-      background: url('img/cover.jpg') repeat; /* ← ПЛИТКА, 256x256, НИКАКОГО РАСТЯГИВАНИЯ */
-      background-size: 256px 256px; /* фиксированный размер тайла */
+      background: url('img/cover.jpg') repeat;
+      background-size: 256px 256px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -20,7 +19,6 @@
       position: relative;
     }
 
-    /* ----- ПОЛУПРОЗРАЧНАЯ ПОДЛОЖКА, ЧТОБЫ ТЕКСТ ЧИТАЛСЯ ----- */
     body::before {
       content: '';
       position: fixed;
@@ -28,11 +26,10 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.3); /* затемнение, чтобы фон не выжигал глаза */
+      background: rgba(0, 0, 0, 0.3);
       z-index: 0;
     }
 
-    /* ----- ГЛАВНЫЙ БЛОК — БЕЛЫЙ, ПО ЦЕНТРУ ----- */
     .container {
       max-width: 1100px;
       width: 100%;
@@ -45,7 +42,6 @@
       border: 1px solid rgba(255,255,255,0.3);
     }
 
-    /* ----- ВСЁ ОСТАЛЬНОЕ БЕЗ ИЗМЕНЕНИЙ (ТЕКСТ КАК У ТЕБЯ) ----- */
     * {
       margin: 0;
       padding: 0;
@@ -280,6 +276,27 @@
       color: #5f6c80;
     }
 
+    .download-links {
+      margin-top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .download-links a {
+      color: #1e3a8a;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+      border-left: 3px solid #3b82f6;
+      padding-left: 10px;
+    }
+
+    .download-links a:hover {
+      text-decoration: underline;
+      color: #0f2b6e;
+    }
+
     @media (max-width: 800px) {
       .main { flex-direction: column; }
       .sidebar { width: 100%; }
@@ -291,21 +308,18 @@
   <div class="container">
 
     <div class="dm_menu" style="background: #000000; color: white; padding: 12px 16px; border-radius: 12px; border-bottom: none; margin-bottom: 20px;">
-  <a href="#" style="color: white; text-decoration: none;">store.lunastore.com</a> |
-</div>
+      <a href="#" style="color: white; text-decoration: none;">store.lunastore.com</a> |
+    </div>
 
-   <div class="header" style="background: #0f2b6e; padding: 20px; border-radius: 20px; display: flex; align-items: center; justify-content: space-between;">
-  <div class="ls_dm_log">
-    <img src="img/favicon.png" alt="LunaStore" style="width: 64px; height: 64px; object-fit: contain;">
-  </div>
-  <div class="rl_l" style="text-align: right;">
-    <h1 class="txtr" style="color: white; font-size: 36px; font-weight: 900; margin: 0;">LunaStore</h1>
-    <div class="subtitle txtr" style="color: rgba(255,255,255,0.8);">Установите на Win7 и будете приятно удивлены</div>
-  </div>
-
-  
-
-</div>
+    <div class="header" style="background: #0f2b6e; padding: 20px; border-radius: 20px; display: flex; align-items: center; justify-content: space-between;">
+      <div class="ls_dm_log">
+        <img src="img/favicon.png" alt="LunaStore" style="width: 64px; height: 64px; object-fit: contain;">
+      </div>
+      <div class="rl_l" style="text-align: right;">
+        <h1 class="txtr" style="color: white; font-size: 36px; font-weight: 900; margin: 0;">LunaStore</h1>
+        <div class="subtitle txtr" style="color: rgba(255,255,255,0.8);">Установите на Win7 и будете приятно удивлены</div>
+      </div>
+    </div>
 
     <div class="headerline"></div>
 
@@ -313,11 +327,9 @@
 
       <!-- САЙДБАР -->
       <div class="sidebar">
- <div class="sidebar">
-  <div class="boxhead_primary" style="background: #2c5282; color: white; border-bottom: 2px solid #1e3a5f;">
-    <b>Аккаунт</b>
-  </div>
-  </div>
+        <div class="boxhead_primary" style="background: #2c5282; color: white; border-bottom: 2px solid #1e3a5f;">
+          <b>Аккаунт</b>
+        </div>
         <div class="box">
           <ul>
             <div class="sidebar_info">Здесь будут пункты меню, связанные с Вашим аккаунтом</div>
@@ -332,13 +344,12 @@
                 <img src="img/apps1.png" class="tab-icon" alt=""> Все приложения
               </li>
             </a>
-			  <a href="#" style="text-decoration: none;">
+			<a href="category-games.html" style="text-decoration: none;">
               <li class="top" id="active" style="background: #e6edf6; padding: 10px; border-radius: 12px; font-weight: 600; color: #0b2b4a;">
                 <img src="img/games.png" class="tab-icon" alt=""> Игры и развлечения
               </li>
             </a>
           </ul>
-
         </div>
 
         <div class="adv_block">
@@ -350,81 +361,52 @@
 
       <!-- КОНТЕНТ -->
       <div class="content">
-  <div class="tabs">
-    <div class="tab-bar">
-      <div class="tab active">
-        <img src="img/tabs/store.png" class="tab-icon" alt="">
-        МАГАЗИН
-      </div>
-    </div>
+        <div class="tabs">
+          <div class="tab-bar">
+            <div class="tab active">
+              <img src="img/tabs/store.png" class="tab-icon" alt="">
+              МАГАЗИН
+			  
+            </div>
+          </div>
 
-    <!-- 🔥 ЛОГОТИП ПОД ВКЛАДКОЙ КАК НА СКРИНЕ 🔥 -->
-    <div style="text-align: center; margin: 30px 0 20px 0;">
-      <img src="img/maintenance/main_logo.png" alt="LunaStore" style="width: 500px; height: 80px; object-fit: contain;">
-      <h2 style="font-size: 28px; font-weight: 700; color: #0a1c2f; margin-top: 10px; margin-bottom: 0;"></h2>
-      <div style="font-size: 14px; color: #5a6979; margin-top: 5px;"></div>
-    </div>
+          <!-- Логотип под вкладкой -->
+          <div style="text-align: center; margin: 30px 0 20px 0;">
+            <img src="img/maintenance/main_logo.png" alt="LunaStore" style="width: 500px; height: 80px; object-fit: contain;">
+            <h2 style="font-size: 28px; font-weight: 700; color: #0a1c2f; margin-top: 10px; margin-bottom: 0;"></h2>
+            <div style="font-size: 14px; color: #5a6979; margin-top: 5px;"></div>
+          </div>
 
-    <!-- ДАЛЬШЕ ТВОИ КАРТОЧКИ -->
-    
+          <!-- КАРТОЧКИ ПРОГРАММ (JAVA) -->
           <div class="tab-content">
 
-            <!-- КАРТОЧКИ (ТЕКСТ ТВОЙ, Я НЕ МЕНЯЛ) -->
-			
-    
-                
-
-
-
+            <!-- Java 8 -->
+            <div class="faq_card">
+              <img src="img/ogsteam.png" alt="Java">
+              <div style="flex:1;">
+                <div id="faq_title">
+                  OGSteam [3.243]
+                  <a href="#" style="background: #16a34a;"><b>Последний релиз</b></a>
+				  <a href="#" style="background: #16a34a;"><b>Бесплатно</b></a>
+                </div>
+                <div id="faq_content">
+                  
+                  <div class="download-links">
+                    
+                    <a href="https://github.com/LunaStoreDev/store/releases/download/434666/OGSteamInstaller.exe">Установить x64</a>
+                  </div>
+                </div>
+              </div>
+            </div>
 
            
-			
-			
-			
-			
-			<div class="faq_card" style="background: #fff9e6; border: 1px solid #ffeeb3;">
-  <img src="img/betacraft.png" alt="icon" style="width: 32px; height: 32px; margin-top: -4px;">
-  <div style="flex:1;">
-    <div id="faq_title">
-      BetaCraft
-	  <a href="betacraft.html" style="background: #16a34a; color: white; padding: 6px 16px; border-radius: 40px; font-size: 14px; font-weight: 600; text-decoration: none; transition: 0.2s;">
-        <b>Бесплатно</b>
-</a>
-                </div>
-                <div id="faq_content">
-                  Betacraft written in the old Minecraft logo style. ... Left to right: A pig, Steve, and a sheep Betacraft Launcher Download Now! Server IP: betacraft.uk (b1.7.3).
-                </div>
-              </div>
-            </div>
-			
-			
-			<div class="faq_card" style="background: #fff9e6; border: 1px solid #ffeeb3;">
-  <img src="img/ogsteam.png" alt="icon" style="width: 32px; height: 32px; margin-top: -4px;">
-  <div style="flex:1;">
-    <div id="faq_title">
-      OGSteam
-	  <a href="ogsteam.html" style="background: #16a34a; color: white; padding: 6px 16px; border-radius: 40px; font-size: 14px; font-weight: 600; text-decoration: none; transition: 0.2s;">
-        <b>Бесплатно</b>
-</a>
-                </div>
-                <div id="faq_content">
-                 Link to the OGSteam Homepage. STORE. Home Discovery Queue Wishlist Points Shop News Charts. ... OGSteam Gift Cards. Give the Gift of Game.
-                </div>
-              </div>
-            </div>
-			
-			
-			
+             
 			
 
-			
-
-
-
-          </div>
-        </div>
-      </div>
-    </div>
+          </div> <!-- конец tab-content -->
+        </div> <!-- конец tabs -->
+      </div> <!-- конец content -->
+    </div> <!-- конец main -->
 
     <div class="footer">
       <div style="text-align: right; font-size: 11px;">
@@ -433,6 +415,6 @@
       </div>
     </div>
 
-  </div>
+  </div> <!-- конец container -->
 </body>
 </html>
